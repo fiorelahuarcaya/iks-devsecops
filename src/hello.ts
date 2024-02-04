@@ -5,7 +5,7 @@ const fastify = Fastify({
 
 // Declare a route
 fastify.get("/", async function handler(request, reply) {
-  return { message: "Este es un mensaja cambiado de prueba" };
+  return { message: "Este es un mensaje cambiado de prueba 2.0" };
 });
 
 // Determine the host based on an environment variable
