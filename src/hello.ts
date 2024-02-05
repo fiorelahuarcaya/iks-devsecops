@@ -5,7 +5,7 @@ const fastify = Fastify({
 
 // Declare a route
 fastify.get("/", async function handler(request, reply) {
-  return { message: "hello world" };
+  return { message: "ejemplo 5.0" };
 });
 
 // Determine the host based on an environment variable
