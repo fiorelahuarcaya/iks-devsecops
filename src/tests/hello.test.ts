@@ -17,5 +17,5 @@ test("GET `/` route", async () => {
 
   expect(res.statusCode).toBe(200);
   expect(res.headers["content-type"]).toBe("application/json; charset=utf-8");
-  expect(JSON.parse(res.payload)).toEqual({ hello: "world" });
+  expect(JSON.parse(res.payload)).toEqual({ hello: "HOLA" });
 });
