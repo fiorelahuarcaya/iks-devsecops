@@ -1,12 +1,19 @@
 import Fastify from "fastify";
-const fastify = Fastify({
-  logger: true,
-});
 
-// Declare a route
-fastify.get("/", async function handler(request, reply) {
-  return { message: "Este es un mensaje cambiado de prueba 2.0" };
-});
+export function buildFastify(logger = false) {
+  const fastify = Fastify({
+    logger,
+  });
+
+  // Declare a route
+  fastify.get("/", async function handler(request, reply) {
+    return { hello: "world" };
+  });
+
+  return fastify;
+}
+
+const fastify = buildFastify(true);
 
 // Determine the host based on an environment variable
 const host = process.env.HOST || "localhost";
