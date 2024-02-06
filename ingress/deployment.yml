@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: deployment
+  namespace: demo
+spec:
+  rules:
+  - host: demo.<INGRESS-SUBDOMAIN>
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: <SERVICE-NAME>
+            port:
+              number: 3000
