@@ -7,7 +7,7 @@ export function buildFastify(logger = false) {
 
   // Declare a route
   fastify.get("/", async function handler(request, reply) {
-    return { message: "HOLA 2" };
+    return { message: "HOLA 3" };
   });
 
   return fastify;
