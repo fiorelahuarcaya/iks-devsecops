@@ -7,7 +7,7 @@ export function buildFastify(logger = false) {
 
   // Declare a route
   fastify.get("/", async function handler(request, reply) {
-    return { message: "HOLA with ENV" };
+    return { message: "hello" };
   });
 
   return fastify;
